@@ -73,7 +73,7 @@ public class PhoneController {
 	}
 	// 수정-->modify
 	@RequestMapping(value = "/modify",method = {RequestMethod.GET,RequestMethod.POST})
-	public String modify(@RequestParam("personid") int personid, @RequestParam("name") String name, @RequestParam("hp") String hp,
+	public String modify(@RequestParam("id") int personid, @RequestParam("name") String name, @RequestParam("hp") String hp,
 			@RequestParam("company") String company) {
 		PhoneVo phoneVo = new PhoneVo(personid, name, hp, company);
 		PhoneDao phoneDao =new PhoneDao();
