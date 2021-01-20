@@ -64,10 +64,10 @@ public class PhoneController {
 	}
 	// 수정폼-->modifyForm
 	@RequestMapping(value = "/modifyForm",method = {RequestMethod.GET,RequestMethod.POST})
-	public String modifyForm(Model model,@RequestParam("personid") int personid) {
+	public String modifyForm(Model model,@RequestParam("id") int personId) {
 		System.out.println("수정폼입니다.");
 		PhoneDao phoneDao = new PhoneDao();
-		PhoneVo pVo =phoneDao.getPerson(personid);
+		PhoneVo pVo =phoneDao.getPerson(personId);
 		model.addAttribute("personVo",pVo);
 		return "/WEB-INF/views/updateForm.jsp";
 	}
